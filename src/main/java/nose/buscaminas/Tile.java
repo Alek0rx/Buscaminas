@@ -1,3 +1,4 @@
+/* JOSUE CARCELEN */
 package nose.buscaminas;
 
 import javafx.animation.ScaleTransition;
