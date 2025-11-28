@@ -7,14 +7,14 @@ import javafx.util.Duration;
 
 
 public class Tile extends StackPane {
-    // Coordenadas y Estado
+ 
     private int x, y;
     private boolean hasMine;
     private boolean isOpen = false;
     private boolean isFlagged = false;
 
     private Text text = new Text();
-    private MinesweeperApp.BoardHandler handler; // Nuevo método en la interfaz
+    private MinesweeperApp.BoardHandler handler; 
 
     public Tile(int x, int y, boolean hasMine, MinesweeperApp.BoardHandler handler) {
         this.x = x;
@@ -47,10 +47,10 @@ public class Tile extends StackPane {
         isOpen = true;
         text.setVisible(true);
 
-        // Quitar la bandera si se abre con una
+       
         if (isFlagged) {
             isFlagged = false;
-            // Notificar al contador que se quitó una bandera
+
             handler.updateMineCounter(1);
         }
 
@@ -72,7 +72,7 @@ public class Tile extends StackPane {
         }
     }
 
-    // Alternar bandera (MODIFICADO)
+
     public void toggleFlag() {
         if (isOpen) return;
 
@@ -81,13 +81,13 @@ public class Tile extends StackPane {
             this.getStyleClass().add("tile-flagged");
             text.setText("🚩");
             text.setVisible(true);
-            // Notificar al contador que se puso una bandera (-1)
+            
             handler.updateMineCounter(-1);
         } else {
             this.getStyleClass().remove("tile-flagged");
             text.setVisible(false);
             text.setText("");
-            // Notificar al contador que se quitó una bandera (+1)
+           
             handler.updateMineCounter(1);
         }
     }
