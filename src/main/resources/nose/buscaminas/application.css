@@ -1,0 +1,76 @@
+
+.root {
+    -fx-background-color: #1a2832; /* Fondo oscuro elegante */
+}
+
+/* Estilo base de la casilla */
+.tile {
+    -fx-background-color: #ecf0f1;
+    -fx-border-color: #9fa1a6;
+    -fx-border-width: 1;
+    -fx-background-radius: 4;
+    -fx-border-radius: 4;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 2, 0, 0, 1);
+}
+
+/* Efecto al pasar el mouse por encima */
+.tile:hover {
+    -fx-background-color: #abb1f3;
+    -fx-cursor: hand;
+}
+
+/* Casilla revelada (más oscura y "hundida") */
+.tile-revealed {
+    -fx-background-color: #8a9697;
+    /*-fx-effect: inner-shadow(three-pass-box, rgba(0,0,0,0.4), 2, 0, 0, 1);*/
+}
+
+/* Texto de los números */
+.tile-text {
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 18px;
+    -fx-fill: #2c3e50;
+}
+
+/* Colores específicos para números */
+.text-1 { -fx-fill: #003f70; }
+.text-2 { -fx-fill: #00c362; }
+.text-3 { -fx-fill: #ff4936; }
+.text-4 { -fx-fill: #b741ea; }
+
+/* Mina explotada */
+.tile-bomb {
+    -fx-background-color: #e74c3c;
+    -fx-border-color: #c0392b;
+}
+
+/* Bandera */
+.tile-flagged {
+    -fx-background-color: #f1c40f;
+    -fx-border-color: #f39c12;
+}
+
+.button {
+    -fx-background-color: #3498db;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 15px;
+    -fx-background-radius: 5;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #2980b9;
+}
+/* --- Estilos para los contadores (Timer y Minas) */
+.game-display {
+    -fx-background-color: #000000;
+    -fx-text-fill: #FF0000;
+    -fx-padding: 5px 10px;
+    -fx-border-color: #7f8c8d;
+    -fx-border-width: 2px;
+    -fx-font-family: 'Monospaced';
+    -fx-font-size: 24px;
+    -fx-alignment: center-right;
+}
